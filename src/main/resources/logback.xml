@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- normal pattern -->
+            <!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{36}) - %msg%n</pattern>-->
+            <!-- compact pattern -->
+            <pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) %cyan(%logger{18}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- sparse logging -->
+    <logger name="com" level="WARN"/>
+    <logger name="io" level="WARN"/>
+    <logger name="org" level="WARN"/>
+    <logger name="org.apache.kafka" level="WARN"/>
+    <logger name="org.spring" level="INFO"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="kafka" level="WARN"/>
+    <logger name="com.github.mj" level="INFO"/>
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
